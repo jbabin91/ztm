@@ -1,14 +1,14 @@
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useRef, useState } from 'react';
 import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity,
   Linking,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
 
@@ -78,7 +78,7 @@ export const App = () => {
                 style={[styles.listItem, styles.learning]}
                 onPress={() =>
                   Linking.openURL(
-                    'https://nx.dev/getting-started/intro?utm_source=nx-project'
+                    'https://nx.dev/getting-started/intro?utm_source=nx-project',
                   )
                 }
               >
@@ -162,7 +162,7 @@ export const App = () => {
                 style={[styles.listItem, styles.learning]}
                 onPress={() =>
                   Linking.openURL(
-                    'https://www.youtube.com/@NxDevtools/videos?utm_source=nx-project'
+                    'https://www.youtube.com/@NxDevtools/videos?utm_source=nx-project',
                   )
                 }
               >
@@ -194,7 +194,7 @@ export const App = () => {
                 style={[styles.listItem, styles.learning]}
                 onPress={() =>
                   Linking.openURL(
-                    'https://nx.dev/react-tutorial/1-code-generation?utm_source=nx-project'
+                    'https://nx.dev/react-tutorial/1-code-generation?utm_source=nx-project',
                   )
                 }
               >
@@ -237,7 +237,7 @@ export const App = () => {
                 style={[styles.listItem, styles.learning]}
                 onPress={() =>
                   Linking.openURL(
-                    'https://nxplaybook.com/?utm_source=nx-project'
+                    'https://nxplaybook.com/?utm_source=nx-project',
                   )
                 }
               >
@@ -284,7 +284,7 @@ export const App = () => {
             <TouchableOpacity
               onPress={() =>
                 Linking.openURL(
-                  'https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console&utm_source=nx-project'
+                  'https://marketplace.visualstudio.com/items?itemName=nrwl.angular-console&utm_source=nx-project',
                 )
               }
             >
@@ -319,7 +319,7 @@ export const App = () => {
             <TouchableOpacity
               onPress={() =>
                 Linking.openURL(
-                  'https://plugins.jetbrains.com/plugin/21060-nx-console'
+                  'https://plugins.jetbrains.com/plugin/21060-nx-console',
                 )
               }
             >
@@ -589,101 +589,30 @@ export const App = () => {
     </>
   );
 };
+
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: '#ffffff',
+  appTitleText: {
+    fontWeight: '500',
+    paddingTop: 12,
   },
   codeBlock: {
     backgroundColor: 'rgba(55, 65, 81, 1)',
+    borderRadius: 4,
     marginVertical: 12,
     padding: 12,
-    borderRadius: 4,
-  },
-  monospace: {
-    color: '#ffffff',
-    fontFamily: 'Courier New',
-    marginVertical: 4,
   },
   comment: {
     color: '#cccccc',
   },
-  marginBottomSm: {
-    marginBottom: 6,
-  },
-  marginBottomMd: {
-    marginBottom: 18,
-  },
-  marginBottomLg: {
-    marginBottom: 24,
-  },
-  textLight: {
-    fontWeight: '300',
-  },
-  textBold: {
-    fontWeight: '500',
-  },
-  textCenter: {
-    textAlign: 'center',
-  },
-  text2XS: {
-    fontSize: 12,
-  },
-  textXS: {
-    fontSize: 14,
-  },
-  textSm: {
-    fontSize: 16,
-  },
-  textMd: {
-    fontSize: 18,
-  },
-  textLg: {
-    fontSize: 24,
-  },
-  textXL: {
-    fontSize: 48,
-  },
-  textContainer: {
-    marginVertical: 12,
-  },
-  textSubtle: {
-    color: '#6b7280',
-  },
-  section: {
-    marginVertical: 24,
-    marginHorizontal: 12,
-  },
-  shadowBox: {
-    backgroundColor: 'white',
-    borderRadius: 24,
-    shadowColor: 'black',
-    shadowOpacity: 0.15,
-    shadowOffset: {
-      width: 1,
-      height: 4,
-    },
-    shadowRadius: 12,
-    padding: 24,
-    marginBottom: 24,
-  },
-  listItem: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  listItemTextContainer: {
-    marginLeft: 12,
-    flex: 1,
-  },
-  appTitleText: {
-    paddingTop: 12,
-    fontWeight: '500',
-  },
   hero: {
-    borderRadius: 12,
     backgroundColor: '#143055',
-    padding: 36,
+    borderRadius: 12,
     marginBottom: 24,
+    padding: 36,
+  },
+  heroText: {
+    color: '#ffffff',
+    marginVertical: 12,
   },
   heroTitle: {
     flex: 1,
@@ -693,23 +622,95 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     marginLeft: 12,
   },
-  heroText: {
-    color: '#ffffff',
-    marginVertical: 12,
-  },
-  whatsNextButton: {
-    backgroundColor: '#ffffff',
-    paddingVertical: 16,
-    borderRadius: 8,
-    width: '50%',
-    marginTop: 24,
-  },
   learning: {
     marginVertical: 12,
   },
+  listItem: {
+    alignItems: 'center',
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  listItemTextContainer: {
+    flex: 1,
+    marginLeft: 12,
+  },
   love: {
-    marginTop: 12,
     justifyContent: 'center',
+    marginTop: 12,
+  },
+  marginBottomLg: {
+    marginBottom: 24,
+  },
+  marginBottomMd: {
+    marginBottom: 18,
+  },
+  marginBottomSm: {
+    marginBottom: 6,
+  },
+  monospace: {
+    color: '#ffffff',
+    fontFamily: 'Courier New',
+    marginVertical: 4,
+  },
+  scrollView: {
+    backgroundColor: '#ffffff',
+  },
+  section: {
+    marginHorizontal: 12,
+    marginVertical: 24,
+  },
+  shadowBox: {
+    backgroundColor: 'white',
+    borderRadius: 24,
+    marginBottom: 24,
+    padding: 24,
+    shadowColor: 'black',
+    shadowOffset: {
+      height: 4,
+      width: 1,
+    },
+    shadowOpacity: 0.15,
+    shadowRadius: 12,
+  },
+  text2XS: {
+    fontSize: 12,
+  },
+  textBold: {
+    fontWeight: '500',
+  },
+  textCenter: {
+    textAlign: 'center',
+  },
+  textContainer: {
+    marginVertical: 12,
+  },
+  textLg: {
+    fontSize: 24,
+  },
+  textLight: {
+    fontWeight: '300',
+  },
+  textMd: {
+    fontSize: 18,
+  },
+  textSm: {
+    fontSize: 16,
+  },
+  textSubtle: {
+    color: '#6b7280',
+  },
+  textXL: {
+    fontSize: 48,
+  },
+  textXS: {
+    fontSize: 14,
+  },
+  whatsNextButton: {
+    backgroundColor: '#ffffff',
+    borderRadius: 8,
+    marginTop: 24,
+    paddingVertical: 16,
+    width: '50%',
   },
 });
 

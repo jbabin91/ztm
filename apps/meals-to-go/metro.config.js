@@ -13,15 +13,15 @@ const { assetExts, sourceExts } = defaultConfig.resolver;
  * @type {import('metro-config').MetroConfig}
  */
 const customConfig = {
-  transformer: {
-    babelTransformerPath: require.resolve('react-native-svg-transformer'),
-  },
   resolver: {
     assetExts: assetExts.filter((ext) => ext !== 'svg'),
-    sourceExts: [...sourceExts, 'svg'],
     blockList: exclusionList([/^(?!.*node_modules).*\/dist\/.*/]),
+    sourceExts: [...sourceExts, 'svg'],
     // unstable_enableSymlinks: true,
     // unstable_enablePackageExports: true,
+  },
+  transformer: {
+    babelTransformerPath: require.resolve('react-native-svg-transformer'),
   },
 };
 

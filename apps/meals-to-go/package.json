@@ -2,17 +2,28 @@
   "name": "meals-to-go",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "android": "expo run:android",
+    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/meals-to-go",
+    "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/meals-to-go && cp pnpm-lock.yaml apps/meals-to-go",
+    "ios": "expo run:ios"
+  },
   "dependencies": {
+    "@expo/metro-config": "*",
+    "@nx/expo": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
-    "metro-config": "*",
-    "react-native": "*",
     "expo": "*",
+    "expo-splash-screen": "~0.20.5",
+    "expo-status-bar": "~1.6.0",
+    "metro-config": "*",
+    "react": "*",
+    "react-native": "*",
     "react-native-svg": "*",
+    "react-native-svg-transformer": "*",
     "react-native-web": "*"
   },
-  "scripts": {
-    "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/meals-to-go && cp pnpm-lock.yaml apps/meals-to-go",
-    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/meals-to-go"
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
   }
 }
